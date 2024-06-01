@@ -39,6 +39,9 @@
     <Reference Include="FluentValidation, Version=11.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
       <HintPath>..\packages\FluentValidation.11.9.1\lib\netstandard2.0\FluentValidation.dll</HintPath>
     </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
     <Reference Include="Google.Protobuf, Version=3.25.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.25.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -57,6 +60,8 @@
     <Reference Include="MySql.Data, Version=8.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.3.0\lib\net462\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
@@ -87,6 +92,7 @@
       <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -96,40 +102,89 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
     <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
       <HintPath>..\packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexionBD.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="Data\AutenticarLogin.cs" />
+    <Compile Include="Data\EstudianteDataAccess.cs" />
+    <Compile Include="Data\MateriaDataAccess.cs" />
+    <Compile Include="Data\ProfesorDataAccess.cs" />
+    <Compile Include="Data\UsuarioDataAccess.cs" />
+    <Compile Include="Models\Materia.cs" />
+    <Compile Include="Views\DetallesProfesor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\DetallesProfesor.Designer.cs">
+      <DependentUpon>DetallesProfesor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Views\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Views\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="Views\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="Views\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewAsignaturas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewAsignaturas.Designer.cs">
+      <DependentUpon>ViewAsignaturas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewEstudiantes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewEstudiantes.Designer.cs">
+      <DependentUpon>ViewEstudiantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Estudiante.cs" />
+    <Compile Include="Models\Profesor.cs" />
+    <Compile Include="Models\Usuario.cs" />
+    <Compile Include="Views\Nueva Cuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Nueva Cuenta.Designer.cs">
+      <DependentUpon>Nueva Cuenta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Views\ViewProfesores.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewProfesores.Designer.cs">
+      <DependentUpon>ViewProfesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewUsuarios.Designer.cs">
+      <DependentUpon>ViewUsuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Views\DetallesProfesor.resx">
+      <DependentUpon>DetallesProfesor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewAsignaturas.resx">
+      <DependentUpon>ViewAsignaturas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewEstudiantes.resx">
+      <DependentUpon>ViewEstudiantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Nueva Cuenta.resx">
+      <DependentUpon>Nueva Cuenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -140,6 +195,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\ViewProfesores.resx">
+      <DependentUpon>ViewProfesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewUsuarios.resx">
+      <DependentUpon>ViewUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -157,5 +218,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
