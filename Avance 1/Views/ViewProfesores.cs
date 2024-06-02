@@ -46,6 +46,8 @@ namespace Avance_1.Views
             txtNombreProf.Text = string.Empty;
             txtApellidoProf.Text = string.Empty;
             txtTitulo.Text = string.Empty;
+            dataGridView1.ClearSelection();
+            dataGridView1.CurrentCell = null;
         }
 
         private bool ValidarCampos()
@@ -62,7 +64,6 @@ namespace Avance_1.Views
             }
             return true;
         }
-
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
@@ -191,6 +192,11 @@ namespace Avance_1.Views
             {
                 MessageBox.Show("Seleccione una fila para eliminar.");
             }
+        }
+
+        private void ViewProfesores_Load(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }

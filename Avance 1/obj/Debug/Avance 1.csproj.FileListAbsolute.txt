@@ -141,3 +141,49 @@ C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance_1.Views.ViewAsign
 C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance_1.Views.DetallesProfesor.resources
 C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance_1.Views.ViewProfesores.resources
 C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance_1.Views.ViewUsuarios.resources
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance_1.Views.ViewHome.resources
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance_1.Views.NuevaMatricula.resources
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance_1.Views.VerMatriculas.resources
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance 1.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.Charting.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.Quality.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.Snippets.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.System.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.WPFonts.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\System.ValueTuple.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.pdb
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.xml
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.Charting.pdb
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.Charting.xml
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.Quality.pdb
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.Quality.xml
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.Snippets.pdb
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.System.pdb
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.System.xml
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.WPFonts.pdb
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\PdfSharp.WPFonts.xml
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\System.ValueTuple.xml
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\de\PdfSharp.resources.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\de\PdfSharp.Charting.resources.dll
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance_1.Views.ViewNotas.resources
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance_1.Views.ViewHomeProfesor.resources
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance_1.Views.VerAsignaciones.resources
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance_1.Views.VerHorarios.resources
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance_1.Views.ViewAdmin.resources
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Avance 1.exe.manifest
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\bin\Debug\Avance 1.application
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance 1.exe.manifest
+C:\Users\LENOVO\Desktop\Proyecto_PED\Avance 1\obj\Debug\Avance 1.application

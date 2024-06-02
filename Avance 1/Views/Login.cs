@@ -1,5 +1,4 @@
 ﻿using Avance_1.Data;
-using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
 
@@ -29,11 +28,18 @@ namespace Avance_1
 
             try
             {
-                if (auth.Authenticate(nombreUsuario, contraseña))
+                var (autenticado, idUsuario, rolId) = auth.Authenticate(nombreUsuario, contraseña);
+                if (autenticado)
                 {
                     MessageBox.Show("Inicio de sesión exitoso. ¡Bienvenido!", "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtUser.Clear();
                     txtPass.Clear();
+
+                    // Guardar la información del usuario en la sesión
+                    UserSession.IdUsuario = idUsuario;
+                    UserSession.NombreUsuario = nombreUsuario;
+                    UserSession.RolId = rolId;
+
                     Dashboard sistemaForm2 = new Dashboard();
                     sistemaForm2.FormClosed += (s, arg) => this.Close();
                     sistemaForm2.Show();
@@ -50,8 +56,8 @@ namespace Avance_1
             {
                 MessageBox.Show($"Error al conectarse a la base de datos: {ex.Message}", "Error de Conexión", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
+
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
@@ -63,7 +69,6 @@ namespace Avance_1
             txtPass.UseSystemPasswordChar = !chkMostrar.Checked;
         }
 
-
         private void Login_Shown(object sender, EventArgs e)
         {
             txtUser.Focus();
@@ -74,6 +79,7 @@ namespace Avance_1
             Nueva_Cuenta nueva = new Nueva_Cuenta();
             nueva.Show();
             this.Hide();
-        } 
+        }
     }
 }
+

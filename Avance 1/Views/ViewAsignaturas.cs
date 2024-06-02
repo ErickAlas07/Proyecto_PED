@@ -68,6 +68,8 @@ namespace Avance_1.Views
             txtFacultad.Clear();
             txtAbreviatura.Clear();
             cmbProfesores.SelectedIndex = -1;
+            dataGridView1.ClearSelection();
+            dataGridView1.CurrentCell = null;
         }
 
         private bool ValidarCampos()
@@ -196,6 +198,11 @@ namespace Avance_1.Views
                 txtAbreviatura.Text = selectedRow.Cells["abreviatura"].Value.ToString();
                 cmbProfesores.SelectedValue = Convert.ToInt32(selectedRow.Cells["id_profesor"].Value);
             }
+        }
+
+        private void ViewAsignaturas_Load(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }

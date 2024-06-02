@@ -209,7 +209,14 @@ namespace Avance_1
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            Login l = new Login();
+            l.Show();
+            this.Close();
         }
     }
 }

@@ -54,6 +54,8 @@ namespace Avance_1.Views
             txtContacto.Clear();
             txtCorreo.Clear();
             cmbGenero.SelectedIndex = 0;
+            dataGridView1.ClearSelection();
+            dataGridView1.CurrentCell = null;
         }
 
         private bool ValidarCampos()
@@ -208,6 +210,11 @@ namespace Avance_1.Views
             {
                 MessageBox.Show("Seleccione una fila para eliminar.");
             }
+        }
+
+        private void ViewEstudiantes_Load(object sender, EventArgs e)
+        {
+            limpiar();
         }
     }
 }

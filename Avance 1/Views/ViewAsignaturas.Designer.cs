@@ -249,6 +249,7 @@ namespace Avance_1.Views
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(838, 317);
@@ -264,6 +265,7 @@ namespace Avance_1.Views
             this.Controls.Add(this.splitContainer1);
             this.Name = "ViewAsignaturas";
             this.Size = new System.Drawing.Size(871, 640);
+            this.Load += new System.EventHandler(this.ViewAsignaturas_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);

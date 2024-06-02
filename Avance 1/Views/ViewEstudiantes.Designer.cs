@@ -64,6 +64,7 @@ namespace Avance_1.Views
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 70;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(838, 317);
@@ -188,18 +189,18 @@ namespace Avance_1.Views
             this.lblNombreEst.AutoSize = true;
             this.lblNombreEst.Location = new System.Drawing.Point(36, 26);
             this.lblNombreEst.Name = "lblNombreEst";
-            this.lblNombreEst.Size = new System.Drawing.Size(139, 17);
+            this.lblNombreEst.Size = new System.Drawing.Size(152, 17);
             this.lblNombreEst.TabIndex = 19;
-            this.lblNombreEst.Text = "Nombre de profesor:";
+            this.lblNombreEst.Text = "Nombre de estudiante:";
             // 
             // lblApellidoEst
             // 
             this.lblApellidoEst.AutoSize = true;
             this.lblApellidoEst.Location = new System.Drawing.Point(36, 58);
             this.lblApellidoEst.Name = "lblApellidoEst";
-            this.lblApellidoEst.Size = new System.Drawing.Size(139, 17);
+            this.lblApellidoEst.Size = new System.Drawing.Size(152, 17);
             this.lblApellidoEst.TabIndex = 20;
-            this.lblApellidoEst.Text = "Apellido de profesor:";
+            this.lblApellidoEst.Text = "Apellido de estudiante:";
             // 
             // txtNombreEst
             // 
@@ -275,6 +276,7 @@ namespace Avance_1.Views
             this.Controls.Add(this.panel1);
             this.Name = "ViewEstudiantes";
             this.Size = new System.Drawing.Size(871, 640);
+            this.Load += new System.EventHandler(this.ViewEstudiantes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -275,5 +275,26 @@ namespace Avance_1.Data
                 throw new InvalidOperationException($"Error al verificar la existencia del usuario: {ex.Message}", ex);
             }
         }
+
+        public int ObtenerIdProfesorPorUsuario(int idUsuario)
+        {
+            try
+            {
+                ConexionBD objCon = new ConexionBD();
+                MySqlConnection con = objCon.conexion;
+                con.Open();
+                string query = "SELECT id_profesor FROM profesor WHERE id_usuario = @IdUsuario";
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                object result = cmd.ExecuteScalar();
+
+                objCon.CerrarConexion();
+                return result != null ? Convert.ToInt32(result) : -1;
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Error al obtener el ID del profesor: {ex.Message}", ex);
+            }
+        }
     }
 }

@@ -292,5 +292,35 @@ namespace Avance_1.Data
             string nombreUsuario = $"{inicialNombre}{apellido.ToLower()}";
             return nombreUsuario;
         }
+
+        public string ObtenerIdEstudiantePorUsuario(int idUsuario)
+        {
+            try
+            {
+                ConexionBD objCon = new ConexionBD();
+                MySqlConnection con = objCon.conexion;
+                con.Open();
+
+                string query = "SELECT id_estudiante FROM estudiante WHERE id_usuario = @IdUsuario";
+
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@IdUsuario", idUsuario);
+                var result = cmd.ExecuteScalar();
+                //objCon.CerrarConexion();
+                if (result != null)
+                {
+                    return result.ToString(); // Convertir el resultado a string
+                }
+                else
+                {
+                    return ""; // Retornar cadena vacía si no se encuentra el estudiante
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Error al obtener el ID del estudiante: {ex.Message}", ex);
+            }
+        }
+
     }
 }

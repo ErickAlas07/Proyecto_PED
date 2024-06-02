@@ -56,6 +56,7 @@ namespace Avance_1
             this.lblFechaNac = new System.Windows.Forms.Label();
             this.lblApellidos = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
+            this.btnAtras = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.gpbDatosCuenta.SuspendLayout();
             this.grbDatosPersonales.SuspendLayout();
@@ -113,12 +114,15 @@ namespace Avance_1
             // 
             // btnCrear
             // 
+            this.btnCrear.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnCrear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrear.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCrear.Location = new System.Drawing.Point(741, 386);
             this.btnCrear.Name = "btnCrear";
             this.btnCrear.Size = new System.Drawing.Size(95, 40);
             this.btnCrear.TabIndex = 25;
             this.btnCrear.Text = "Crear";
-            this.btnCrear.UseVisualStyleBackColor = true;
+            this.btnCrear.UseVisualStyleBackColor = false;
             this.btnCrear.Click += new System.EventHandler(this.btnCrear_Click);
             // 
             // panel1
@@ -321,11 +325,30 @@ namespace Avance_1
             this.lblNombre.TabIndex = 27;
             this.lblNombre.Text = "Nombres:";
             // 
+            // btnAtras
+            // 
+            this.btnAtras.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnAtras.FlatAppearance.BorderSize = 3;
+            this.btnAtras.ForeColor = System.Drawing.Color.White;
+            this.btnAtras.IconChar = FontAwesome.Sharp.IconChar.ArrowAltCircleLeft;
+            this.btnAtras.IconColor = System.Drawing.Color.White;
+            this.btnAtras.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAtras.IconSize = 30;
+            this.btnAtras.Location = new System.Drawing.Point(12, 397);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Padding = new System.Windows.Forms.Padding(5);
+            this.btnAtras.Size = new System.Drawing.Size(64, 41);
+            this.btnAtras.TabIndex = 31;
+            this.btnAtras.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.btnAtras.UseVisualStyleBackColor = false;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // Nueva_Cuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(860, 450);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.gpbDatosCuenta);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCrear);
@@ -357,14 +380,12 @@ namespace Avance_1
         private System.Windows.Forms.GroupBox gpbDatosCuenta;
         private System.Windows.Forms.GroupBox grbDatosPersonales;
         private System.Windows.Forms.ComboBox cmbGenero;
-        private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.TextBox txtContacto;
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.DateTimePicker dtpBirthdate;
         private System.Windows.Forms.TextBox txtApellidos;
         private System.Windows.Forms.TextBox txtNombres;
-        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblContacto;
         private System.Windows.Forms.Label lblDireccion;
@@ -372,5 +393,8 @@ namespace Avance_1
         private System.Windows.Forms.Label lblFechaNac;
         private System.Windows.Forms.Label lblApellidos;
         private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.TextBox txtTitulo;
+        private System.Windows.Forms.Label lblTitulo;
+        private FontAwesome.Sharp.IconButton btnAtras;
     }
 }

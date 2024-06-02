@@ -119,6 +119,30 @@ namespace Avance_1.Data
             }
 
         }
+
+        public DataTable ObtenerMateriasPorProfesor(int idProfesor)
+        {
+            try
+            {
+                ConexionBD objCon = new ConexionBD();
+                MySqlConnection con = objCon.conexion;
+                con.Open();
+                string query = "SELECT id_materia, nombre FROM materia WHERE id_profesor = @IdProfesor";
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@IdProfesor", idProfesor);
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                DataTable table = new DataTable();
+                adapter.Fill(table);
+
+                objCon.CerrarConexion();
+                return table;
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException($"Error al obtener las materias por profesor: {ex.Message}", ex);
+            }
+        }
+
     }
 }
 

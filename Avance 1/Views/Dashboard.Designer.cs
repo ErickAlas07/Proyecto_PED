@@ -30,21 +30,26 @@ namespace Avance_1
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAdministradores = new FontAwesome.Sharp.IconButton();
             this.btnAtras = new FontAwesome.Sharp.IconButton();
             this.btnEstudiantes = new FontAwesome.Sharp.IconButton();
             this.btnProfesor = new FontAwesome.Sharp.IconButton();
             this.btnMaterias = new FontAwesome.Sharp.IconButton();
             this.btnAdmin = new FontAwesome.Sharp.IconButton();
+            this.viewHomeProfesor1 = new Avance_1.Views.ViewHomeProfesor();
+            this.viewHome1 = new Avance_1.Views.ViewHome();
+            this.viewEstudiantes1 = new Avance_1.Views.ViewEstudiantes();
+            this.viewProfesores1 = new Avance_1.Views.ViewProfesores();
             this.viewAsignaturas1 = new Avance_1.Views.ViewAsignaturas();
             this.viewEstudiantes = new Avance_1.Views.ViewEstudiantes();
-            this.viewProfesores1 = new Avance_1.Views.ViewProfesores();
-            this.viewEstudiantes1 = new Avance_1.Views.ViewEstudiantes();
+            this.viewAdmin1 = new Avance_1.Views.ViewAdmin();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.Controls.Add(this.btnAdministradores);
             this.panel1.Controls.Add(this.btnAtras);
             this.panel1.Controls.Add(this.btnEstudiantes);
             this.panel1.Controls.Add(this.btnProfesor);
@@ -54,6 +59,26 @@ namespace Avance_1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(238, 641);
             this.panel1.TabIndex = 4;
+            // 
+            // btnAdministradores
+            // 
+            this.btnAdministradores.BackColor = System.Drawing.Color.DarkBlue;
+            this.btnAdministradores.FlatAppearance.BorderSize = 3;
+            this.btnAdministradores.ForeColor = System.Drawing.Color.White;
+            this.btnAdministradores.IconChar = FontAwesome.Sharp.IconChar.UserGear;
+            this.btnAdministradores.IconColor = System.Drawing.Color.White;
+            this.btnAdministradores.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAdministradores.IconSize = 45;
+            this.btnAdministradores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdministradores.Location = new System.Drawing.Point(21, 444);
+            this.btnAdministradores.Name = "btnAdministradores";
+            this.btnAdministradores.Padding = new System.Windows.Forms.Padding(5);
+            this.btnAdministradores.Size = new System.Drawing.Size(174, 61);
+            this.btnAdministradores.TabIndex = 10;
+            this.btnAdministradores.Text = "Administradores";
+            this.btnAdministradores.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdministradores.UseVisualStyleBackColor = false;
+            this.btnAdministradores.Click += new System.EventHandler(this.btnAdministradores_Click);
             // 
             // btnAtras
             // 
@@ -78,12 +103,12 @@ namespace Avance_1
             this.btnEstudiantes.BackColor = System.Drawing.Color.DarkBlue;
             this.btnEstudiantes.FlatAppearance.BorderSize = 3;
             this.btnEstudiantes.ForeColor = System.Drawing.Color.White;
-            this.btnEstudiantes.IconChar = FontAwesome.Sharp.IconChar.GraduationCap;
+            this.btnEstudiantes.IconChar = FontAwesome.Sharp.IconChar.UserGraduate;
             this.btnEstudiantes.IconColor = System.Drawing.Color.White;
             this.btnEstudiantes.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEstudiantes.IconSize = 45;
             this.btnEstudiantes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstudiantes.Location = new System.Drawing.Point(21, 399);
+            this.btnEstudiantes.Location = new System.Drawing.Point(21, 355);
             this.btnEstudiantes.Name = "btnEstudiantes";
             this.btnEstudiantes.Padding = new System.Windows.Forms.Padding(5);
             this.btnEstudiantes.Size = new System.Drawing.Size(174, 61);
@@ -98,12 +123,12 @@ namespace Avance_1
             this.btnProfesor.BackColor = System.Drawing.Color.DarkBlue;
             this.btnProfesor.FlatAppearance.BorderSize = 3;
             this.btnProfesor.ForeColor = System.Drawing.Color.White;
-            this.btnProfesor.IconChar = FontAwesome.Sharp.IconChar.PeopleGroup;
+            this.btnProfesor.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.btnProfesor.IconColor = System.Drawing.Color.White;
             this.btnProfesor.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnProfesor.IconSize = 45;
             this.btnProfesor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProfesor.Location = new System.Drawing.Point(21, 303);
+            this.btnProfesor.Location = new System.Drawing.Point(21, 274);
             this.btnProfesor.Name = "btnProfesor";
             this.btnProfesor.Padding = new System.Windows.Forms.Padding(5);
             this.btnProfesor.Size = new System.Drawing.Size(174, 61);
@@ -123,7 +148,7 @@ namespace Avance_1
             this.btnMaterias.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaterias.IconSize = 45;
             this.btnMaterias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaterias.Location = new System.Drawing.Point(21, 206);
+            this.btnMaterias.Location = new System.Drawing.Point(21, 192);
             this.btnMaterias.Name = "btnMaterias";
             this.btnMaterias.Padding = new System.Windows.Forms.Padding(5);
             this.btnMaterias.Size = new System.Drawing.Size(174, 61);
@@ -143,15 +168,44 @@ namespace Avance_1
             this.btnAdmin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdmin.IconSize = 45;
             this.btnAdmin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdmin.Location = new System.Drawing.Point(21, 113);
+            this.btnAdmin.Location = new System.Drawing.Point(21, 110);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Padding = new System.Windows.Forms.Padding(5);
-            this.btnAdmin.Size = new System.Drawing.Size(174, 61);
+            this.btnAdmin.Padding = new System.Windows.Forms.Padding(20);
+            this.btnAdmin.Size = new System.Drawing.Size(174, 64);
             this.btnAdmin.TabIndex = 5;
-            this.btnAdmin.Text = "Administración";
+            this.btnAdmin.Text = "Home";
             this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
+            // viewHomeProfesor1
+            // 
+            this.viewHomeProfesor1.Location = new System.Drawing.Point(238, 0);
+            this.viewHomeProfesor1.Name = "viewHomeProfesor1";
+            this.viewHomeProfesor1.Size = new System.Drawing.Size(871, 640);
+            this.viewHomeProfesor1.TabIndex = 10;
+            // 
+            // viewHome1
+            // 
+            this.viewHome1.Location = new System.Drawing.Point(238, -1);
+            this.viewHome1.Name = "viewHome1";
+            this.viewHome1.Size = new System.Drawing.Size(871, 640);
+            this.viewHome1.TabIndex = 9;
+            // 
+            // viewEstudiantes1
+            // 
+            this.viewEstudiantes1.BackColor = System.Drawing.Color.White;
+            this.viewEstudiantes1.Location = new System.Drawing.Point(238, 3);
+            this.viewEstudiantes1.Name = "viewEstudiantes1";
+            this.viewEstudiantes1.Size = new System.Drawing.Size(871, 640);
+            this.viewEstudiantes1.TabIndex = 8;
+            // 
+            // viewProfesores1
+            // 
+            this.viewProfesores1.Location = new System.Drawing.Point(238, 3);
+            this.viewProfesores1.Name = "viewProfesores1";
+            this.viewProfesores1.Size = new System.Drawing.Size(871, 640);
+            this.viewProfesores1.TabIndex = 7;
             // 
             // viewAsignaturas1
             // 
@@ -169,20 +223,13 @@ namespace Avance_1
             this.viewEstudiantes.Size = new System.Drawing.Size(729, 640);
             this.viewEstudiantes.TabIndex = 5;
             // 
-            // viewProfesores1
+            // viewAdmin1
             // 
-            this.viewProfesores1.Location = new System.Drawing.Point(238, 3);
-            this.viewProfesores1.Name = "viewProfesores1";
-            this.viewProfesores1.Size = new System.Drawing.Size(871, 640);
-            this.viewProfesores1.TabIndex = 7;
-            // 
-            // viewEstudiantes1
-            // 
-            this.viewEstudiantes1.BackColor = System.Drawing.Color.White;
-            this.viewEstudiantes1.Location = new System.Drawing.Point(238, 3);
-            this.viewEstudiantes1.Name = "viewEstudiantes1";
-            this.viewEstudiantes1.Size = new System.Drawing.Size(871, 640);
-            this.viewEstudiantes1.TabIndex = 8;
+            this.viewAdmin1.Location = new System.Drawing.Point(238, 0);
+            this.viewAdmin1.Name = "viewAdmin1";
+            this.viewAdmin1.Size = new System.Drawing.Size(871, 640);
+            this.viewAdmin1.TabIndex = 11;
+            this.viewAdmin1.Load += new System.EventHandler(this.viewAdmin1_Load);
             // 
             // Dashboard
             // 
@@ -190,6 +237,9 @@ namespace Avance_1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1109, 638);
+            this.Controls.Add(this.viewAdmin1);
+            this.Controls.Add(this.viewHomeProfesor1);
+            this.Controls.Add(this.viewHome1);
             this.Controls.Add(this.viewEstudiantes1);
             this.Controls.Add(this.viewProfesores1);
             this.Controls.Add(this.viewAsignaturas1);
@@ -217,5 +267,9 @@ namespace Avance_1
         private Views.ViewAsignaturas viewAsignaturas1;
         private Views.ViewProfesores viewProfesores1;
         private Views.ViewEstudiantes viewEstudiantes1;
+        private Views.ViewHome viewHome1;
+        private Views.ViewHomeProfesor viewHomeProfesor1;
+        private FontAwesome.Sharp.IconButton btnAdministradores;
+        private Views.ViewAdmin viewAdmin1;
     }
 }
